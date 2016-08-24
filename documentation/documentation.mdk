@@ -1,0 +1,39 @@
+Title         : Linux 下动态链接库的使用
+subTitle      : 编译、链接和加载
+Author        : 崔利伟
+Affiliation   : 电子科技大学计算机科学与工程学院
+Email         : cui@hellolw.com
+Bibliography  : example.bib
+Doc class     : [reprint,nocopyrightspace]style/sigplanconf.cls
+Package       : [UTF8]ctex
+name-references   : 参考
+name-abstract     : 概要
+name-contents     :  目录
+
+[TITLE]
+
+~ Abstract
+本文主要叙述了动态链接库的编译、链接和加载过程并具体讲解了其中的一些细节问题。
+~
+
+~ TexRaw
+% any commands necessary for your particular style
+\keywords{动态链接库，编译链接与加载}
+~
+
+# 动态链接库概述     { #sec-intro }
+## 库的概要回顾
+我们所说的“库”，指的是为了将一部分代码复用或者隐藏底层细节而制成的模块。据此开发者便可以方便地进行二进制级别的复用而不必获得源码，因此库是“模块化编程”的重要组成部分。我们常见的动态链接库有`GNU`实现的标准库`libstdc++.so`，`Intel`公司的`libmkl.so`等。
+
+~ Note
+事实上任何代码均可以制成库，但由于`C++`语言对于类、多态等概念并没有实现上的约束，导致编译期多态（模板）和运行时多态（虚表）的实现均可以由编译器厂商自行决定，所以造成二进制接口互不兼容，或者说不可保证兼容。因此多数库中的代码均由`extern "C"`加入函数之前来避免编译器为支持重载而进行的名字混淆。
+~
+
+## 与静态库的联系
+目前的主流操作系统均支持动态链接库和静态链接库的使用。这里的”动态”“静态”之分，主要指的是二进制代码是以什么方式被载入内存的。静态库
+
+# 编译动态库
+
+# 链接动态库
+
+# 加载动态库
