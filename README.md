@@ -17,3 +17,6 @@
 
 
 请在`g++` 环境下运行`./run.sh`以获得结果。
+
+## Manual
+[ld-linux(8) - Linux man page](https://linux.die.net/man/8/ld-linux)
